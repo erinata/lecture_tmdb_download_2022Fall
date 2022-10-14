@@ -32,6 +32,7 @@ for json_file_name in glob.glob("json_files/*.json"):
 	genres = ";".join([item['name'] for item in json_data['genres']])
 	production_countries = ";".join([item['iso_3166_1'] for item in json_data['production_countries']])
 
+
 	df = pandas.concat([df, 
 			pandas.DataFrame.from_records([{
 			'movie_id': movie_id,
